@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/8689284d49.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    nav{
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(161, 209, 228);
+        padding: 0 80px;
+        position: sticky;
+        top: 0;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .data{
+        
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        
+        
+    }
+    .button{
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 35px;
+    }
+    button{
+        padding: 0 15px;
+        border: none;
+        background-color: transparent;
+    }
+    button:hover{
+        padding: 5 15px;
+        border-radius: 50%;
+        background-color: rgba(128, 128, 128, 0.459);
+    }
+    
+    .btn{
+        background-color: rgba(135, 207, 235, 0.336);
+    }
+    b{
+        font-size: 80px;
+    }
+    #weather{
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: center;
+    }
+    #demo{
+         width: 63%;
+         background-color: rgba(135, 207, 235, 0.336) ;
+         border-radius: 35px;
+         padding: 30px;
+         
+    }
+    .mid{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .temperature{
+        display: flex;
+        gap: 20px;
+    }
+    .temp{
+        display: flex;
+        gap: 20px;
+    }
+    .name{
+        background-color: white;
+        padding: 5px;
+        border-radius: 35px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid skyblue;
+    }
+    .degree{
+        font-size: 60px;
+    }
+    .sun{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        /* background-color: yellowgreen; */
+    }
+    .fa-sun{
+        font-size: 70px;
+        color: gold;
+    }
+    .bright{
+        padding: 4px;
+        width: 350px;
+        background-color: white;
+        border-radius: 35px;
+        text-align: center;
+        border: 1px solid skyblue;
+    }
+    .card{
+        width: 20%;
+        border-radius: 35px;
+        background-color: rgba(135, 207, 235, 0.336) ;
+        border: none;
+    }
+    /* .color{
+        background-color: skyblue;
+        width: 40px;
+        height: 40px;
+    } */
+    
+   
+</style>
+
+<body>
+    
+
+ <nav >
+    <h2>🌥️ Weather<span class="text-primary">Pulse</span></h2>
+    <div class="data">
+        <div class="timer">
+            <p id="Day">Thursday , Sep 24</p>
+            <p id="Time"></p>
+        </div>
+        <div class="button">
+            <a href=""><button>°C</button></a>
+            <a href=""><button>°F</button></a>
+        </div>
+    </div>
+ </nav>
+ 
+
+ <div class="header">
+
+    <div class="inp-data d-flex justify-content-center my-4">
+        <input class="form-control-lg border form-control mx-2" style="width:400px" type="text" placeholder="🔍︎ Search City">
+        <a href=""><button class="btn px-4 py-3 bg-primary rounded-4 text-white border border-white ">Search</button></a>
+    </div>
+
+    <div class="btns d-flex gap-3 justify-content-center align-items-center">
+        <p class="text-primary">Quick Cities:</p>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">Faisalabad</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">Lahore</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">Karachi</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">Islamabad</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">Dubai</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">London</button></a>
+        <a href=""><button class="btn px-3 py-2 rounded-5 ">New York</button></a>
+    </div>
+
+
+    <div id="weather"></div>
+
+    <div id="cards"></div>
+
+
+
+
+
+
+
+ </div>
+
+
+
+
+
+
+ <script src="WeatherAPI-1.js"></script>
+</body>
+</html>
